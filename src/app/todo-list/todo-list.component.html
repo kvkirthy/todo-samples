@@ -1,0 +1,21 @@
+
+<mat-card>
+    <mat-card-header>
+        <mat-card-title>
+            Your list of items below,
+        </mat-card-title>
+        <mat-card-subtitle>
+            <mat-slide-toggle [checked]="isAllSelected" (change)="onShowAllClick()">Include Completed Tasks</mat-slide-toggle>
+        </mat-card-subtitle>
+
+    </mat-card-header>
+    
+
+    <mat-card-content>
+        <div *ngFor="let todo of todos$ | async" class="todo-item">
+            <mat-checkbox [checked]="todo.isComplete" (change)="toggleTodo(todo.id)"  [id]="todo.id">
+                {{todo.title}}
+            </mat-checkbox>
+        </div>
+    </mat-card-content>
+</mat-card>

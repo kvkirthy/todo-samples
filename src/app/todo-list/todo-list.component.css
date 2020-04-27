@@ -1,0 +1,13 @@
+strong{
+    padding-right: 80px;
+}
+
+mat-card {
+    width: 40%;
+}
+
+div.todo-item {
+    margin-top: 25px;
+    margin-bottom: 15px;
+    font-size: 15pt;
+}
