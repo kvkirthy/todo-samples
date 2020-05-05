@@ -1,0 +1,15 @@
+{
+    "name": "todo-sample",
+    "version": "1.0.0",
+    "description": "JavaScript modules' demo",
+    "main": "index.js",
+    "scripts": {
+        "start": "npx http-server"
+    },
+    "author": "V Keerti Kotaru",
+    "license": "ISC",
+    "dependencies": {},
+    "devDependencies": {
+        "http-server": "^0.12.3"
+    }
+}

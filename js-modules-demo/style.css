@@ -1,0 +1,21 @@
+body {
+    padding: 10px 10px 10px 50px;
+}
+
+div {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 16pt;
+    margin-top: 20px;
+}
+
+h2 {
+    font-family: Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 100;
+    font-size: 18pt;
+    margin-bottom: 5px;
+    padding-left: 22px;
+}
+
+#btnCreateTodo {
+    margin-top: 20px;
+}
