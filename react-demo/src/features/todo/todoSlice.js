@@ -48,9 +48,15 @@ export const { toggleTodoComplete, createTodo, setShouldIncludeComplete } = todo
 export const getAllTodos = state => state.todo.todos;
 export const showActiveTodos = state => state.todo.shouldIncludeComplete;
 
-export const getTodos = createSelector([getAllTodos, showActiveTodos], (todos, showActiveTodos) => {
-    console.log("%cInvoked selector", "background: lightyellow; color: purple; font-size: 14pt", );
-    return showActiveTodos ? todos : todos.filter(item => !item.isComplete);
+export const getTodos = createSelector([getAllTodos, showActiveTodos], (todos, showCompletedTodos) => {
+    console.log(`%cInvoked selector. Show Completed Todos: ${showCompletedTodos?'YES':'NO'} `, "background: skyblue; color: purple; font-size: 14pt", );
+    return showCompletedTodos ? todos : todos.filter(item => !item.isComplete);
 });
+
+export const getTodos2 = state => {
+    console.log("%cInvoked selector", "background: lightyellow; color: purple; font-size: 14pt", );
+    return state.todo.shouldIncludeComplete ? state.todo.todos : state.todo.todos.filter(item => !item.isComplete);
+}
+
 
 export default todoSlice.reducer;
