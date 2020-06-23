@@ -27,6 +27,12 @@ export class TodoListComponent implements OnInit {
 
   todos$: Observable<Todo[]>;
 
+  sampleTodo: Todo = {
+    id: 0,
+    title: "test",
+    isComplete: true
+  };
+
   isAllSelected = false;
 
   constructor(private store: Store<{ todos: Todo[]}>) { 
@@ -36,6 +42,17 @@ export class TodoListComponent implements OnInit {
 
 
   toggleTodo(id: number){
+    
+    // // does not work
+    // let aNumericVariable: number = null;
+    // let aNumericVariable2: number = undefined;
+
+    // declare a union type to let a null value set on a number variable
+
+    let aNumericVariable3: number | null = null;
+    let aNumericVariable4: number | undefined = undefined;
+
+
     this.store.dispatch(toggleTodoComplete({id}));
   }
 

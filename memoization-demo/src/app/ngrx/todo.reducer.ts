@@ -22,7 +22,7 @@ export const initialState = {todos: [{
 
 function toggleTodoReturnState(state:Todo[], todoId: number): Todo[] {
   // let newState = state.slice(0); // for cloning the array object
-  let newState = [];
+  let newState: Array<Todo> = [];
   state.map( item => {
       newState.push({
         id: item.id,
