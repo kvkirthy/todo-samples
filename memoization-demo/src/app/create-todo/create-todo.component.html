@@ -2,4 +2,9 @@
     <mat-label>Enter a new todo</mat-label>
     <input [(ngModel)]="todoText" type="text" matInput >
 </mat-form-field>
+<mat-date-range-input [rangePicker]="picker">
+    <input matStartDate placeholder="Start date">
+    <input matEndDate placeholder="End date">
+  </mat-date-range-input>
+  <mat-date-range-picker #picker></mat-date-range-picker>
 <button mat-raised-button color="primary" (click)="createClick()">Create</button>
