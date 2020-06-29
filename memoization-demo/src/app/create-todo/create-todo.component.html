@@ -5,14 +5,21 @@
     </mat-form-field>
 </div>
 <div>
-    <mat-form-field appearance="fill">
+    <mat-form-field >
+        <!-- The date field label -->
         <mat-label>Complete todo in the timeframe</mat-label>
-        <mat-date-range-input [rangePicker]="picker">
+
+        <!-- Form field that shows from date and to date-->
+        <mat-date-range-input [rangePicker]="todoWindow">
             <input matStartDate placeholder="Start date">
             <input matEndDate placeholder="End date">
         </mat-date-range-input>
-        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-        <mat-date-range-picker #picker></mat-date-range-picker>
+
+        <!-- a button that toggles date range picker -->
+        <mat-datepicker-toggle matSuffix [for]="todoWindow"></mat-datepicker-toggle>
+
+        <!-- date range picker allows selecting from and to date -->
+        <mat-date-range-picker #todoWindow></mat-date-range-picker>
     </mat-form-field>
 </div>
 <button matSuffix mat-raised-button color="primary" (click)="createClick()">Create</button>
